@@ -5,6 +5,7 @@ const taskRoutes = require('./routes/tasks.routes');
 const app = express();
 
 app.use(morgan('dev'));
+app.use(express.json()); //con este cambio exprees va a poder entender los request body 
 app.use(taskRoutes);
 
 app.listen(4000)
