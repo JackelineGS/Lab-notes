@@ -13,7 +13,7 @@ Navbar() {
           <Toolbar>
             <Typography variant='h6' sx={{flexGrow:1}}>
               <Link to='/' style={{textDecoration:'none', color:'#eee'}}>
-                Pearn Stack
+                Lista de tareas
               </Link>
             </Typography>
             <Button 
