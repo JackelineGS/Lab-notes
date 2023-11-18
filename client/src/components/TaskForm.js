@@ -88,7 +88,7 @@ const loadTask = async(id) => {
           }}
         >
           <Typography variant="5" textAlign="center" color="white">
-            Create Task
+            {editing ? "Edit Task" : "Create Task"}
           </Typography>
           <CardContent>
             <form onSubmit={handleSubmit}>
@@ -129,7 +129,7 @@ const loadTask = async(id) => {
                 {loading ? (
                   <CircularProgress color="inherit" size={24} />
                 ) : (
-                  "Create"
+                  "Save"
                 )}
               </Button>
             </form>
