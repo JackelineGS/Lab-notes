@@ -6,6 +6,7 @@ export default function
 TaskForm() {
 
 // Definimos un estado utilizando el hook 'useState'
+// Hace una validación apenas cargue el componente 'useParams': trae información de la URL o de la información que estamos recibiendo
 // El estado inicial de task es un objeto con las propiedades title y description
 // Ambos inician como cadenas vacías
 // Se crea la función setTask para actualizar el estado de task
@@ -16,39 +17,60 @@ TaskForm() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [editing, setEditing] = useState(false);
+
 
   const navigate = useNavigate(); 
   const params = useParams();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
 
-  setLoading(true)
+    if(editing) {
+      const res = await fetch(`http://localhost:4000/tasks/${params.id}`, {
+        method: "PUT",
+        body: JSON.stringify(task),
+        headers: {'Content-Type': 'application/json'},
+      });
 
-    const res = await fetch("http://localhost:4000/tasks", {
-      method: "POST",
-      body: JSON.stringify(task),
-      headers: {'Content-Type': 'application/json'},
-    });
-    const data = await res.json();
-    console.log(data);
+      const data = await res.json(); 
+      console.log(data)
+    } else {
+      await fetch("http://localhost:4000/tasks", {
+        method: "POST",
+        body: JSON.stringify(task),
+        headers: {'Content-Type': 'application/json'},
+      });
+    }
+    
     setLoading(false)
     navigate('/')
   }; 
 
 // recive un evento e como parámetro
-// cuando se llama a la función imprime en la cosola el nombre del elemento que disparó el evento
+// cuando se llama a la función imprime en la consola el nombre del elemento que disparó el evento
 
   const handleChange = e => {
     setTask({...task, [e.target.name]: e.target.value});
   }
 
-  // Hace una validación apenas cargue el componente
+// Cargamos una sola tarea 
+const loadTask = async(id) => {
+  const res = await fetch(`http://localhost:4000/tasks/${id}`);
+  const data = await res.json(); 
+  setTask({title: data.title, description: data.description})
+  setEditing(true)
+}
+
+
+// Hace una validación apenas cargue el componente, si colocamos el params.id dentro sin una condicional, se entiende que es un TRUE 
   useEffect(() => {
     if(params.id){
-      console.log('fetch task')
+      loadTask(params.id)
     }
-  }, [params.id])
+  }, [params.id]) //si cambia el ID vuelve a ocurrir esto
+
 
   return (
     <Grid
@@ -78,6 +100,7 @@ TaskForm() {
                   margin: ".5rem 0",
                 }}
                 name="title"
+                value={task.title}
                 onChange={handleChange}
                 InputProps={{ style: { color: "white" } }}
                 InputLabelProps={{ style: { color: "white" } }}
@@ -92,6 +115,7 @@ TaskForm() {
                   margin: ".5rem 0",
                 }}
                 name="description"
+                value={task.description}
                 onChange={handleChange}
                 InputProps={{ style: { color: "white" } }}
                 InputLabelProps={{ style: { color: "white" } }}
