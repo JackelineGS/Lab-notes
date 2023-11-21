@@ -5,7 +5,7 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del Proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de Aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
+* [4. Prototipo](#4-prototipo)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Consideraciones técnicas](#6-consideraciones-técnicas)
 * [7. Hacker Edition](#7-hacker-edition)
@@ -69,23 +69,18 @@ de notas).
 > Acá puedes ver una [lista de todos los objetivos de aprendizaje](../../learning-objectives/data.yml)
 > que contempla nuestra currícula.
 
-## 4. Consideraciones generales
+## 4. Prototipo
 
-* Este proyecto se debe "resolver" de forma individual.
+Para desarrollar el proyecto realizamos diseños de alta fidelidad usando Figma, el cual se puede revisar en el siguiente [Figma](https://www.figma.com/file/I6bhQnK3Dk7zXeNVDiOKz6/Labo-Note-Project?type=design&node-id=0-1&mode=design&t=uESlwi9sP2jO439p-0)
 
-* El rango de tiempo estimado para completar el proyecto es de 3 a 5 Sprints.
+🌱 Vista de lista de tareas
 
-* Trabaja en una historia hasta terminarla antes de pasar a la siguiente.
+![RetoKonecta.oferta](src/assets/img/lista_tareas.PNG)
 
-* La aplicación debe ser un _Single Page App_. Las notas serán realizadas desde
-una _tablet_, pero **no debe ser una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**.
+🌱 Vista para crear tareas
 
-* Necesitamos pensar bien en el aspecto UX de quienes van a tomar las notas, el
-tamaño y aspecto de los botones, la visibilidad del estado actual del pedido,
-etc.
+![RetoKonecta.bienvenida](src/assets/img/crear_tarea.PNG)
 
-* Implementar pruebas unitarias de tus componentes.
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
