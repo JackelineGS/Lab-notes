@@ -75,11 +75,11 @@ Para desarrollar el proyecto realizamos diseños de alta fidelidad usando Figma,
 
 🌱 Vista de lista de tareas
 
-![RetoKonecta.oferta](src/assets/img/lista_tareas.PNG)
+![RetoKonecta.oferta](client/src/assets/img/lista_tareas.PNG)
 
 🌱 Vista para crear tareas
 
-![RetoKonecta.bienvenida](src/assets/img/crear_tarea.PNG)
+![RetoKonecta.bienvenida](client/src/assets/img/crear_tarea.PNG)
 
 
 ## 5. Criterios de aceptación mínimos del proyecto
