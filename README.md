@@ -6,10 +6,10 @@
 * [2. Resumen del Proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de Aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Prototipo](#4-prototipo)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+* [5. Historias de usuario](#5-historias-de-usuario)
 * [6. Consideraciones técnicas](#6-consideraciones-técnicas)
 * [7. Hacker Edition](#7-hacker-edition)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [8. Recursos](#8-recursos)
 
 ***
 
@@ -82,7 +82,7 @@ Para desarrollar el proyecto realizamos diseños de alta fidelidad usando Figma,
 ![Labo.notes](client/src/assets/crear_tarea.PNG)
 
 
-## 5. Criterios de aceptación mínimos del proyecto
+## 5. Historias de usuario
 
 ### Definición del producto
 
@@ -186,7 +186,7 @@ pasarte a esta sección.
 * Guardar el color de la nota.
 * Crear una nota como publica.
 
-## 8. Pistas, tips y lecturas complementarias
+## 8. Recursos
 
 Súmate al canal de Slack
 [#project-lab-notes](https://claseslaboratoria.slack.com/archives/C03SBNSE7HQ)
@@ -195,8 +195,6 @@ para conversar y pedir ayuda del proyecto.
 ### Frameworks / libraries
 
 * [React](https://reactjs.org/)
-* [Angular](https://angular.io/)
-* [Vue](https://es.vuejs.org/index.html)
 
 ### Herramientas
 
